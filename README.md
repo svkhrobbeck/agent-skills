@@ -17,16 +17,16 @@ bitta buyruq bilan o'rnatib ishlatish uchun.
 ### skills.sh orqali (eng oson)
 
 ```sh
-npx skills add svkhrobbeck/agent-skills
+npx skills add svkhrobbeck/agent-skills -g -a claude-code
 ```
 
 Faqat bitta skill'ni o'rnatish uchun:
 
 ```sh
-npx skills add svkhrobbeck/agent-skills --skill handoff
-npx skills add svkhrobbeck/agent-skills --skill use-handoff
-npx skills add svkhrobbeck/agent-skills --skill use-claude-md
-npx skills add svkhrobbeck/agent-skills --skill use-plan
+npx skills add svkhrobbeck/agent-skills -g -a claude-code --skill handoff
+npx skills add svkhrobbeck/agent-skills -g -a claude-code --skill use-handoff
+npx skills add svkhrobbeck/agent-skills -g -a claude-code --skill use-claude-md
+npx skills add svkhrobbeck/agent-skills -g -a claude-code --skill use-plan
 ```
 
 ### Qo'lda (install skript)
