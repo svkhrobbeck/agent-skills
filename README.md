@@ -9,6 +9,8 @@ bitta buyruq bilan o'rnatib ishlatish uchun.
 |-------|--------|
 | [`handoff`](skills/handoff/SKILL.md) | Keyingi (toza kontekstli) agent ishni davom ettira olishi uchun `HANDOFF.md` hujjatini yozadi / yangilaydi. |
 | [`use-handoff`](skills/use-handoff/SKILL.md) | Reads an existing `HANDOFF.md` and restores the work in a fresh-context conversation. The inverse of `handoff`. |
+| [`use-claude-md`](skills/use-claude-md/SKILL.md) | Reads `CLAUDE.md` plus the real codebase and tech stack, plans in plan mode, asks for extra requirements, and merges everything into one improved plan (saved under `.claude/plans/`) before writing code. |
+| [`use-plan`](skills/use-plan/SKILL.md) | Reads a plan written by `use-claude-md` (under `.claude/plans/`), checks it against the current code, and resumes implementation in a fresh-context conversation. The inverse of `use-claude-md`. |
 
 ## O'rnatish
 
@@ -23,6 +25,8 @@ Faqat bitta skill'ni o'rnatish uchun:
 ```sh
 npx skills add svkhrobbeck/agent-skills --skill handoff
 npx skills add svkhrobbeck/agent-skills --skill use-handoff
+npx skills add svkhrobbeck/agent-skills --skill use-claude-md
+npx skills add svkhrobbeck/agent-skills --skill use-plan
 ```
 
 ### Qo'lda (install skript)
@@ -58,6 +62,8 @@ Claude Code ichida skill nomini slash bilan chaqiring:
 ```
 /handoff
 /use-handoff [HANDOFF.md yo'li]
+/use-claude-md
+/use-plan [.claude/plans/<task> yo'li]
 ```
 
 ## Yangi skill qo'shish
