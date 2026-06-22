@@ -15,13 +15,13 @@ bitta buyruq bilan o'rnatib ishlatish uchun.
 ### skills.sh orqali (eng oson)
 
 ```sh
-npx skills add <username>/skills
+npx skills add svkhrobbeck/agent-skills
 ```
 
 Bitta skill'ni o'rnatish uchun:
 
 ```sh
-npx skills add <username>/skills --skill handoff
+npx skills add svkhrobbeck/agent-skills --skill handoff
 ```
 
 ### Qo'lda (install skript)
@@ -31,26 +31,24 @@ Skill'larni `~/.claude/skills/` ga ko'chiradi.
 #### macOS / Linux
 
 ```sh
-git clone https://github.com/<username>/skills.git
-cd skills
+git clone https://github.com/svkhrobbeck/agent-skills.git
+cd agent-skills
 ./install.sh
 ```
 
 #### Windows (PowerShell)
 
 ```powershell
-git clone https://github.com/<username>/skills.git
-cd skills
+git clone https://github.com/svkhrobbeck/agent-skills.git
+cd agent-skills
 pwsh ./install.ps1
 ```
 
 Yoki `git` siz, to'g'ridan-to'g'ri internetdan:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/<username>/skills/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/svkhrobbeck/agent-skills/main/install.sh | sh
 ```
-
-> `<username>` ni o'z GitHub username'ingizga almashtiring.
 
 ## Ishlatish
 
