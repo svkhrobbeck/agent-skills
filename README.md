@@ -18,10 +18,11 @@ bitta buyruq bilan o'rnatib ishlatish uchun.
 npx skills add svkhrobbeck/agent-skills
 ```
 
-Bitta skill'ni o'rnatish uchun:
+Faqat bitta skill'ni o'rnatish uchun:
 
 ```sh
 npx skills add svkhrobbeck/agent-skills --skill handoff
+npx skills add svkhrobbeck/agent-skills --skill use-handoff
 ```
 
 ### Qo'lda (install skript)
