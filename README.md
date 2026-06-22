@@ -5,12 +5,13 @@ bitta buyruq bilan o'rnatib ishlatish uchun.
 
 ## Skill'lar
 
-| Skill | Tavsif |
-|-------|--------|
-| [`handoff`](skills/handoff/SKILL.md) | Keyingi (toza kontekstli) agent ishni davom ettira olishi uchun `HANDOFF.md` hujjatini yozadi / yangilaydi. |
-| [`use-handoff`](skills/use-handoff/SKILL.md) | Mavjud `HANDOFF.md` ni o'qib, ishni toza kontekstli suhbatda tiklaydi. `handoff` ning teskarisi. |
-| [`use-claude-md`](skills/use-claude-md/SKILL.md) | `CLAUDE.md` ni real kod va tech stack bilan birga o'qiydi, plan modeda rejalashtiradi, userdan qo'shimcha talablarni so'raydi va hammasini bitta yaxshilangan rejaga birlashtirib (`.claude/plans/` ga saqlab) kod yozishdan oldin tayyorlaydi. |
-| [`use-plan`](skills/use-plan/SKILL.md) | `use-claude-md` yozgan rejani (`.claude/plans/` dagi) o'qiydi, joriy kod bilan solishtiradi va toza kontekstli suhbatda implementatsiyani davom ettiradi. `use-claude-md` ning teskarisi. |
+| Skill                                            | Tavsif                                                                                                                                                                                                                                                                            |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`handoff`](skills/handoff/SKILL.md)             | Keyingi (toza kontekstli) agent ishni davom ettira olishi uchun `HANDOFF.md` hujjatini yozadi / yangilaydi.                                                                                                                                                                       |
+| [`use-handoff`](skills/use-handoff/SKILL.md)     | Mavjud `HANDOFF.md` ni o'qib, ishni toza kontekstli suhbatda tiklaydi. `handoff` ning teskarisi.                                                                                                                                                                                  |
+| [`use-claude-md`](skills/use-claude-md/SKILL.md) | `CLAUDE.md` ni real kod va tech stack bilan birga o'qiydi, plan modeda rejalashtiradi, userdan qo'shimcha talablarni so'raydi va hammasini bitta yaxshilangan rejaga birlashtirib (`.claude/plans/` ga saqlab) kod yozishdan oldin tayyorlaydi.                                   |
+| [`use-plan`](skills/use-plan/SKILL.md)           | `use-claude-md` yozgan rejani (`.claude/plans/` dagi) o'qiydi, joriy kod bilan solishtiradi va toza kontekstli suhbatda implementatsiyani davom ettiradi. `use-claude-md` ning teskarisi.                                                                                         |
+| [`ci-doctor`](skills/ci-doctor/SKILL.md)         | GitHub Actions'dagi muvaffaqiyatsiz workflow run'larni `gh` CLI orqali tahlil qilib, asl sababini (root cause) topadi: beqarormi yoki doimiymi baholaydi, buzgan commit'ni aniqlaydi va hisobot beradi. `/ci-doctor help` — qisqa tushuntirish. Ishlatish oson `/ci-doctor <url>` |
 
 ## O'rnatish
 
@@ -27,6 +28,7 @@ npx skills add svkhrobbeck/agent-skills -g -a claude-code --skill handoff
 npx skills add svkhrobbeck/agent-skills -g -a claude-code --skill use-handoff
 npx skills add svkhrobbeck/agent-skills -g -a claude-code --skill use-claude-md
 npx skills add svkhrobbeck/agent-skills -g -a claude-code --skill use-plan
+npx skills add svkhrobbeck/agent-skills -g -a claude-code --skill ci-doctor
 ```
 
 ### Qo'lda (install skript)
@@ -64,6 +66,8 @@ Claude Code ichida skill nomini slash bilan chaqiring:
 /use-handoff [HANDOFF.md yo'li]
 /use-claude-md
 /use-plan [.claude/plans/<task> yo'li]
+/ci-doctor <GitHub Actions run URL>
+/ci-doctor help
 ```
 
 ## Yangi skill qo'shish
