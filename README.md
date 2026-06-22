@@ -8,7 +8,7 @@ bitta buyruq bilan o'rnatib ishlatish uchun.
 | Skill | Tavsif |
 |-------|--------|
 | [`handoff`](handoff/SKILL.md) | Keyingi (toza kontekstli) agent ishni davom ettira olishi uchun `HANDOFF.md` hujjatini yozadi / yangilaydi. |
-| [`use-handoff`](use-handoff/SKILL.md) | Mavjud `HANDOFF.md` ni o'qib, ishni toza suhbatda qayta tiklaydi. `handoff` ning teskarisi. |
+| [`use-handoff`](use-handoff/SKILL.md) | Reads an existing `HANDOFF.md` and restores the work in a fresh-context conversation. The inverse of `handoff`. |
 
 ## O'rnatish
 
