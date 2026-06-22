@@ -8,9 +8,9 @@ bitta buyruq bilan o'rnatib ishlatish uchun.
 | Skill | Tavsif |
 |-------|--------|
 | [`handoff`](skills/handoff/SKILL.md) | Keyingi (toza kontekstli) agent ishni davom ettira olishi uchun `HANDOFF.md` hujjatini yozadi / yangilaydi. |
-| [`use-handoff`](skills/use-handoff/SKILL.md) | Reads an existing `HANDOFF.md` and restores the work in a fresh-context conversation. The inverse of `handoff`. |
-| [`use-claude-md`](skills/use-claude-md/SKILL.md) | Reads `CLAUDE.md` plus the real codebase and tech stack, plans in plan mode, asks for extra requirements, and merges everything into one improved plan (saved under `.claude/plans/`) before writing code. |
-| [`use-plan`](skills/use-plan/SKILL.md) | Reads a plan written by `use-claude-md` (under `.claude/plans/`), checks it against the current code, and resumes implementation in a fresh-context conversation. The inverse of `use-claude-md`. |
+| [`use-handoff`](skills/use-handoff/SKILL.md) | Mavjud `HANDOFF.md` ni o'qib, ishni toza kontekstli suhbatda tiklaydi. `handoff` ning teskarisi. |
+| [`use-claude-md`](skills/use-claude-md/SKILL.md) | `CLAUDE.md` ni real kod va tech stack bilan birga o'qiydi, plan modeda rejalashtiradi, userdan qo'shimcha talablarni so'raydi va hammasini bitta yaxshilangan rejaga birlashtirib (`.claude/plans/` ga saqlab) kod yozishdan oldin tayyorlaydi. |
+| [`use-plan`](skills/use-plan/SKILL.md) | `use-claude-md` yozgan rejani (`.claude/plans/` dagi) o'qiydi, joriy kod bilan solishtiradi va toza kontekstli suhbatda implementatsiyani davom ettiradi. `use-claude-md` ning teskarisi. |
 
 ## O'rnatish
 
