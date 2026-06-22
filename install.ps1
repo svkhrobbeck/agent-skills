@@ -2,7 +2,7 @@
 # Har bir skill = SKILL.md fayli bo'lgan papka.
 $ErrorActionPreference = 'Stop'
 
-$srcDir  = $PSScriptRoot
+$srcDir  = Join-Path $PSScriptRoot 'skills'
 $destDir = if ($env:CLAUDE_SKILLS_DIR) { $env:CLAUDE_SKILLS_DIR } else { Join-Path $HOME '.claude/skills' }
 
 New-Item -ItemType Directory -Force -Path $destDir | Out-Null

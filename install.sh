@@ -3,7 +3,7 @@
 # Har bir skill = SKILL.md fayli bo'lgan papka.
 set -eu
 
-SRC_DIR="$(cd "$(dirname "$0")" && pwd)"
+SRC_DIR="$(cd "$(dirname "$0")/skills" && pwd)"
 DEST_DIR="${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
 
 mkdir -p "$DEST_DIR"

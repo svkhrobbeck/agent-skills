@@ -7,14 +7,28 @@ bitta buyruq bilan o'rnatib ishlatish uchun.
 
 | Skill | Tavsif |
 |-------|--------|
-| [`handoff`](handoff/SKILL.md) | Keyingi (toza kontekstli) agent ishni davom ettira olishi uchun `HANDOFF.md` hujjatini yozadi / yangilaydi. |
-| [`use-handoff`](use-handoff/SKILL.md) | Reads an existing `HANDOFF.md` and restores the work in a fresh-context conversation. The inverse of `handoff`. |
+| [`handoff`](skills/handoff/SKILL.md) | Keyingi (toza kontekstli) agent ishni davom ettira olishi uchun `HANDOFF.md` hujjatini yozadi / yangilaydi. |
+| [`use-handoff`](skills/use-handoff/SKILL.md) | Reads an existing `HANDOFF.md` and restores the work in a fresh-context conversation. The inverse of `handoff`. |
 
 ## O'rnatish
 
+### skills.sh orqali (eng oson)
+
+```sh
+npx skills add <username>/skills
+```
+
+Bitta skill'ni o'rnatish uchun:
+
+```sh
+npx skills add <username>/skills --skill handoff
+```
+
+### Qo'lda (install skript)
+
 Skill'larni `~/.claude/skills/` ga ko'chiradi.
 
-### macOS / Linux
+#### macOS / Linux
 
 ```sh
 git clone https://github.com/<username>/skills.git
@@ -22,7 +36,7 @@ cd skills
 ./install.sh
 ```
 
-### Windows (PowerShell)
+#### Windows (PowerShell)
 
 ```powershell
 git clone https://github.com/<username>/skills.git
@@ -49,7 +63,7 @@ Claude Code ichida skill nomini slash bilan chaqiring:
 
 ## Yangi skill qo'shish
 
-1. Repo ichida `skill-nomi/SKILL.md` papka yarating.
+1. `skills/skill-nomi/SKILL.md` papka yarating.
 2. `SKILL.md` boshiga `name` va `description` frontmatter yozing.
 3. README jadvaliga qator qo'shing.
 4. `./install.sh` qayta ishga tushiring.
