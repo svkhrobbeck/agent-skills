@@ -52,6 +52,15 @@ single, improved plan for the upcoming work.
 - Save plans under **`.claude/plans/<task-slug>/`** (one folder per task,
   `<task-slug>` is a short kebab-case name for the work). This keeps the repo
   root clean and sits next to `CLAUDE.md`.
+- **Always write to the working project's root, never the global user
+  directory.** The `.claude/plans/` path is relative to the root of the project
+  you are working in — the same project whose `CLAUDE.md` you read in step 1
+  (typically the git repo root / the directory holding `package.json`,
+  `pyproject.toml`, etc.). **Never** write the plan to the global
+  `~/.claude/plans/` (`$HOME/.claude` or `%USERPROFILE%\.claude`) or to a
+  different workspace folder. If several project roots are in scope, pick the one
+  that owns the code the task touches, resolve its absolute path, and write the
+  plan there. When unsure which root is correct, ask the user before writing.
 - **Check for an existing plan first.** If `.claude/plans/<task-slug>/` already
   exists (or another folder clearly covers this task), **read it fully and update
   it instead of overwriting** — preserve done/in-progress state, fold the new
@@ -94,6 +103,9 @@ Keep plans easy to track and safe to update:
 
 ## Rules
 - Read-only and in plan mode until the plan is approved.
+- Write the plan to the working project's own `.claude/plans/` (resolved from
+  that project's root), **never** to the global `~/.claude/` or another
+  workspace folder.
 - Read `CLAUDE.md` fully — never plan from memory of "typical" projects.
 - Verify `CLAUDE.md` against the actual code; trust the code on conflicts and
   surface the mismatch.
